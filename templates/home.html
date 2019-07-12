@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Valley Day:3</title>
+</head>
+<body>
+    <h1><center>Welcome to the home Page</center></h1>
+    {% if info%}
+
+        <p> {{ info['main']['temp'] }}</p>
+    {% else %}
+    <form action="/" method='POST'>
+        <input type="text" name="city" placeholder="Enter City Here">
+        <p>Kelvin</p><input type="radio" name="units" value="kelvin">
+        <p>Metric</p><input type="radio" name="units" value="metric">
+        <p>Imperial</p><input type="radio" name="units" value="imperial">
+
+        <input type="submit" value="Give me the weather ...">
+    </form>
+    {% endif %}
+</body>
+</html>
